@@ -1,0 +1,57 @@
+html,
+body,
+#map-canvas {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.storeInfowindow {
+    min-height: 80px;
+}
+
+.infowindow-controls {
+    padding-top: 5px;
+    text-align: center;
+}
+
+#directions-panel {
+    position: absolute !important;
+    top: 18% !important;
+    left: 5px !important;
+    right: 90% !important;
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#directions-panel .modal-content {
+    padding: 0;
+    height: 90%;
+}
+
+#radius-panel {
+    position: absolute;
+    left: 91%;
+    top: 1% !important;
+    width: 150px;
+    height: 70px;
+    overflow: hidden;
+}
+
+#radius-panel input {
+    display: inline-block;
+    height: 4rem;
+    width: 60%;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+#radius-panel .modal-content {
+    padding: 5px;
+}
+
+.getStoreDirection,
+.getStoreDistance {
+    margin: 5px;
+}

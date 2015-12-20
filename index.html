@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Store Locator Demo</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" media="screen, print" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="map-canvas"></div>
+    <div style="border: none; position: absolute; top: 9px; left: 120px; width: 640px;">
+        <form class="col s12" style="border: none;">
+            <div class="row teal lighten-2">
+                <div class="input-field col s12">                    
+                    <input id="search-input" type="search" required>
+                    <label for="search-input"><i class="material-icons prefix">search</i></label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="fixed-action-btn vertical" style="bottom: 145px; right: 5px;">
+        <a class="btn-floating waves-effect waves-light red">
+            <i class="material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating waves-effect waves-light green tooltipped store-distance" data-position="left" data-delay="50" data-tooltip="Get Store Distances"><i class="fa fa-road"></i></a></li>
+            <li><a class="btn-floating waves-effect waves-light red tooltipped nearby-stores" data-position="left" data-delay="50" data-tooltip="Show Nearby Stores"><i class="fa fa-shopping-basket"></i></a></li>
+            <li><a class="btn-floating waves-effect waves-light blue tooltipped user-location" data-position="left" data-delay="50" data-tooltip="Show Current Location"><i class="material-icons">my_location</i></a></li>
+        </ul>
+    </div>
+
+    <!-- Direction Panel -->
+    <div id="directions-panel" class="modal">
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+    <!-- Radius Panel -->
+    <div id="radius-panel" class="modal">
+        <div class="modal-content">
+            Radius:
+            <input id="txtRadius" type="number" value="1000">
+        </div>
+    </div>
+
+    <!-- Distance path Panel -->
+    <div id="distance-panel" class="modal bottom-sheet">
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+        <div class="modal-content" id="distance-panel-content">
+            <ul class="collection" id="distance-collection">
+            </ul>
+        </div>
+    </div>
+
+    <!-- Vendor JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBsYVLaGllEz-XZYoF6xv_wqPsrG0k7oFs&libraries=places"></script>
+
+    <!-- Custom JS -->
+    <script src="js/data_store.js"></script>
+    <script src="js/map_styles.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
